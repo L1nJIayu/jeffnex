@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/",
+  base: "/interviewQuestion/",
   title: "题目合集",
   description: "此站点用于收集各路面试题，方便复习和巩固知识点，不会有系统完整的知识点，仅是为了快速回顾",
   srcDir: './src',

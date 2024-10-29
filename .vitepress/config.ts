@@ -13,7 +13,7 @@ export default defineConfig({
       { text: 'CSS', link: '/css' },
       { text: 'JS', link: '/js' },
       { text: 'Vue', link: '/vue' },
-      // { text: '浏览器', link: '/browser' },
+      { text: '浏览器', link: '/browser' },
       // { text: '网络', link: '/network' },
       // { text: '数据结构和算法', link: '/alg' },
     ],

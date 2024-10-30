@@ -44,6 +44,14 @@ export default defineConfig({
             { text: '详细说一下Promise的用法', link: '/js/详细说一下Promise的用法.md' }
           ]
         }
+      ],
+      '/vue/': [
+        {
+          text: 'Vue',
+          items: [
+            { text: 'hook和普通的函数有什么区别', link: '/js/hook和普通的函数有什么区别.md' },
+          ]
+        }
       ]
     },
 

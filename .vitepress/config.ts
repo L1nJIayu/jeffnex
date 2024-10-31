@@ -49,7 +49,13 @@ export default defineConfig({
         {
           text: 'Vue',
           items: [
-            { text: 'hook和普通的函数有什么区别', link: '/js/hook和普通的函数有什么区别.md' },
+            { text: 'hook和普通的函数有什么区别', link: '/vue/hook和普通的函数有什么区别.md' },
+          ]
+        },
+        {
+          text: '额外的记录',
+          items: [
+            { text: 'watch传入的源reactive和ref的区别', link: '/vue/额外的记录/watch传入的源reactive和ref的区别.md' },
           ]
         }
       ]

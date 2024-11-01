@@ -14,8 +14,8 @@ export default defineConfig({
       { text: 'JS', link: '/js' },
       { text: 'Vue', link: '/vue' },
       { text: '浏览器', link: '/browser' },
+      { text: '数据结构和算法', link: '/数据结构和算法' },
       // { text: '网络', link: '/network' },
-      // { text: '数据结构和算法', link: '/alg' },
     ],
 
     sidebar: {
@@ -56,6 +56,14 @@ export default defineConfig({
           text: '额外的记录',
           items: [
             { text: 'watch传入的源reactive和ref的区别', link: '/vue/额外的记录/watch传入的源reactive和ref的区别.md' },
+          ]
+        }
+      ],
+      '/数据结构和算法/': [
+        {
+          text: '数据结构和算法',
+          items: [
+            { text: '实现一个sum函数', link: '/数据结构和算法/实现一个sum函数.md'}
           ]
         }
       ]

@@ -15,7 +15,13 @@ hero:
       link: /js
     - theme: brand
       text: Vue
-      link: /api-examples
+      link: /vue
+    - theme: brand
+      text: 浏览器和网络
+      link: /浏览器和网络
+    - theme: brand
+      text: 数据结构和算法
+      link: /数据结构和算法
 
 features:
   - title: 内容不多

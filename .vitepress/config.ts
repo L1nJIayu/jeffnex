@@ -26,7 +26,6 @@ export default defineConfig({
             { text: 'CSS3的transform属性有哪些用法', link: '/css/CSS3的transform属性有哪些用法.md' },
             { text: 'Flex有哪些常用的属性', link: '/css/Flex有哪些常用的属性.md' },
             { text: 'flex为1的时候代表什么意思', link: '/css/flex为1的时候代表什么意思.md' },
-            { text: 'CSS3的transform属性有哪些用法', link: '/css/CSS3的transform属性有哪些用法.md' },
             { text: '如果使用transform如何实现垂直居中？', link: '/css/如果使用transform如何实现垂直居中.md' },
             { text: '伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？', link: '/css/伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？.md' },
             // { text: '层叠上下文', link: '/css/层叠上下文.md' },

@@ -28,6 +28,7 @@ export default defineConfig({
             { text: 'flex为1的时候代表什么意思', link: '/css/flex为1的时候代表什么意思.md' },
             { text: '如果使用transform如何实现垂直居中？', link: '/css/如果使用transform如何实现垂直居中.md' },
             { text: '伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？', link: '/css/伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？.md' },
+            { text: '只用CSS画一个三角形', link: '/css/只用CSS画一个三角形.md' },
             // { text: '层叠上下文', link: '/css/层叠上下文.md' },
             // { text: '垂直居中的方案', link: '/css/垂直居中的方案.md' },
             // { text: 'FLex布局', link: '/css/FLex布局.md' },
@@ -40,7 +41,10 @@ export default defineConfig({
           text: 'JS',
           items: [
             { text: '谈一下异步调用的发展历程', link: '/js/谈一下异步调用的发展历程.md' },
-            { text: '详细说一下Promise的用法', link: '/js/详细说一下Promise的用法.md' }
+            { text: '详细说一下Promise的用法', link: '/js/详细说一下Promise的用法.md' },
+            { text: '手写一下Promise', link: '/js/手写一下Promise.md' },
+            { text: '手写Promise.all', link: '/js/手写Promise.all.md' },
+            { text: '展开讲一下什么是事件循环', link: '/js/展开讲一下什么是事件循环.md' },
           ]
         }
       ],

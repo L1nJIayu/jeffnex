@@ -63,6 +63,7 @@ export default defineConfig({
         }
       ],
       '/浏览器和网络/': [
+        { text: '目录', link: '/浏览器和网络'},
         {
           text: '浏览器',
           items: [
@@ -75,6 +76,7 @@ export default defineConfig({
           items: [
             { text: '在浏览器搜索栏中输入一个url会发生什么', link: '/浏览器和网络/网络/在浏览器搜索栏中输入一个url会发生什么.md' },
             { text: '讲下TCP三次握手的过程？稍微详细些', link: '/浏览器和网络/网络/讲下TCP三次握手的过程？稍微详细些.md' },
+            { text: '讲一下TCP的四次挥手', link: '/浏览器和网络/网络/讲一下TCP的四次挥手.md' },
             { text: '什么是跨域问题？如何解决？', link: '/浏览器和网络/网络/什么是跨域问题，如何解决.md' },
           ]
         }

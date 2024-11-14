@@ -34,6 +34,10 @@ DNS请求过程：
 
 ​	本地DNS服务器是运营商管理的，它收到请求后，先从自己本地查找缓存，如果有就直接返回对应的ip地址，如果没有，本地DNS服务器就要向根域名服务器发送请求，得到顶级域名服务器的地址（也就是.com域名服务器），接着请求权威域名服务器
 
+
+
 ![image-20241101165905771](markdown_assets/image-20241101165905771.png)
+
+
 
 [B站视频：DNS域名解析过程-技术蛋](https://www.bilibili.com/video/BV1uL4y1B7aE/?spm_id_from=333.337.search-card.all.click&vd_source=6eb095cb0562513bfc69ebc6ae07e057)

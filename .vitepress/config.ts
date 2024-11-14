@@ -66,16 +66,16 @@ export default defineConfig({
         {
           text: '浏览器',
           items: [
-            { text: '我改变一个可见元素的宽高，会发生reflow还是repaint？使用translateX呢？', link: '/浏览器和网络/我改变一个可见元素的宽高，会发生reflow还是repaint？使用translateX呢？.md' },
-            { text: '讲一下浏览器渲染里的reflow和repaint', link: '/浏览器和网络/讲一下浏览器渲染里的reflow和repaint.md' },
+            { text: '我改变一个可见元素的宽高，会发生reflow还是repaint？使用translateX呢？', link: '/浏览器和网络/浏览器/我改变一个可见元素的宽高，会发生reflow还是repaint？使用translateX呢？.md' },
+            { text: '讲一下浏览器渲染里的reflow和repaint', link: '/浏览器和网络/浏览器/讲一下浏览器渲染里的reflow和repaint.md' },
           ]
         },
         {
           text: '网络',
           items: [
-            { text: '在浏览器搜索栏中输入一个url会发生什么', link: '/浏览器和网络/在浏览器搜索栏中输入一个url会发生什么.md' },
-            { text: '讲下TCP三次握手的过程？稍微详细些', link: '/浏览器和网络/讲下TCP三次握手的过程？稍微详细些.md' },
-            { text: '什么是跨域问题？如何解决？', link: '/浏览器和网络/什么是跨域问题？如何解决？.md' },
+            { text: '在浏览器搜索栏中输入一个url会发生什么', link: '/浏览器和网络/网络/在浏览器搜索栏中输入一个url会发生什么.md' },
+            { text: '讲下TCP三次握手的过程？稍微详细些', link: '/浏览器和网络/网络/讲下TCP三次握手的过程？稍微详细些.md' },
+            { text: '什么是跨域问题？如何解决？', link: '/浏览器和网络/网络/什么是跨域问题？如何解决？.md' },
           ]
         }
       ],
@@ -83,7 +83,7 @@ export default defineConfig({
         {
           text: '算法',
           items: [
-            { text: '实现一个sum函数', link: '/数据结构和算法/实现一个sum函数.md'}
+            { text: '实现一个sum函数', link: '/数据结构和算法/算法/实现一个sum函数.md'}
           ]
         },
         {

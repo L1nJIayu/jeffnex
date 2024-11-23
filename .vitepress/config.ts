@@ -15,7 +15,7 @@ export default defineConfig({
       { text: 'Vue', link: '/vue' },
       { text: '浏览器和网络', link: '/浏览器和网络' },
       { text: '数据结构和算法', link: '/数据结构和算法' },
-      // { text: '网络', link: '/network' },
+      { text: '问题记录', link: '/问题记录' },
     ],
 
     sidebar: {
@@ -91,6 +91,15 @@ export default defineConfig({
         {
           text: '数据结构',
           items: [
+          ]
+        }
+      ],
+      '/问题记录': [
+        { text: '目录', link: '/问题记录'},
+        {
+          text: 'Electron',
+          items: [
+            { text: 'electron-vite 打包makensis.exe报错', link: '/问题记录/Electron/electron-vite打包makensis.exe报错.md' }
           ]
         }
       ]

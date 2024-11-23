@@ -22,6 +22,9 @@ hero:
     - theme: brand
       text: 数据结构和算法
       link: /数据结构和算法
+    - theme: brand
+      text: 问题记录
+      link: /问题记录
 
 features:
   - title: 内容不多

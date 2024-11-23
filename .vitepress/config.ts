@@ -45,6 +45,7 @@ export default defineConfig({
             { text: '手写一下Promise', link: '/js/手写一下Promise.md' },
             { text: '手写Promise.all', link: '/js/手写Promise.all.md' },
             { text: '展开讲一下什么是事件循环', link: '/js/展开讲一下什么是事件循环.md' },
+            { text: 'ESM和CommonJS有什么区别', link: '/js/ESM和CommonJS有什么区别.md' },
           ]
         }
       ],

@@ -25,6 +25,9 @@ hero:
     - theme: brand
       text: 问题记录
       link: /问题记录
+    - theme: brand
+      text: TS类型体操
+      link: /TS类型体操
 
 features:
   - title: 内容不多

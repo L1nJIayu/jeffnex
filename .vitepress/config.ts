@@ -16,6 +16,7 @@ export default defineConfig({
       { text: '浏览器和网络', link: '/浏览器和网络' },
       { text: '数据结构和算法', link: '/数据结构和算法' },
       { text: '问题记录', link: '/问题记录' },
+      { text: 'TS类型体操', link: '/TS类型体操' },
     ],
 
     sidebar: {
@@ -102,6 +103,17 @@ export default defineConfig({
           items: [
             { text: 'electron-vite 打包makensis.exe报错', link: '/问题记录/Electron/electron-vite打包makensis.exe报错.md' }
           ]
+        }
+      ],
+      '/TS类型体操': [
+        { text: '目录', link: '/TS类型体操'},
+        {
+          text: '1.模式匹配',
+          link: '/TS类型体操/1.模式匹配.md'
+        },
+        {
+          text: '2.类型的重新构造',
+          link: '/TS类型体操/2.类型的重新构造.md'
         }
       ]
     },

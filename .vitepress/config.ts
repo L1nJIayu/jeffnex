@@ -84,6 +84,7 @@ export default defineConfig({
         }
       ],
       '/数据结构和算法/': [
+        { text: '目录', link: '/数据结构和算法'},
         {
           text: '算法',
           items: [
@@ -114,6 +115,10 @@ export default defineConfig({
         {
           text: '2.类型的重新构造',
           link: '/TS类型体操/2.类型的重新构造.md'
+        },
+        {
+          text: '3.递归',
+          link: '/TS类型体操/3.递归.md'
         }
       ]
     },

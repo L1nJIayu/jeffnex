@@ -119,6 +119,10 @@ export default defineConfig({
         {
           text: '3.递归',
           link: '/TS类型体操/3.递归.md'
+        },
+        {
+          text: '4.使用数组长度做运算',
+          link: '/TS类型体操/4.使用数组长度做运算.md'
         }
       ]
     },

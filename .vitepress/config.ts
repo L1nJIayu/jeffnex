@@ -104,6 +104,12 @@ export default defineConfig({
           items: [
             { text: 'electron-vite 打包makensis.exe报错', link: '/问题记录/Electron/electron-vite打包makensis.exe报错.md' }
           ]
+        },
+        {
+          text: 'TypeScript',
+          items: [
+            { text: 'Vue组件引入@开头的路径报错', link: '/问题记录/TypeScript/Vue组件引入@开头的路径报错.md' }
+          ]
         }
       ],
       '/TS类型体操': [
@@ -123,6 +129,14 @@ export default defineConfig({
         {
           text: '4.使用数组长度做运算',
           link: '/TS类型体操/4.使用数组长度做运算.md'
+        },
+        {
+          text: '5.联合类型',
+          link: '/TS类型体操/5.联合类型.md'
+        },
+        {
+          text: '6.特殊特性',
+          link: '/TS类型体操/6.特殊特性.md'
         }
       ]
     },

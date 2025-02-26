@@ -4,7 +4,6 @@ layout: home
 
 hero:
   name: "JeffNex"
-  # text: "个人站点"
   tagline: 从代码到认知的持续交付🫡
   actions:
     - theme: brand
@@ -30,8 +29,6 @@ hero:
       link: /TS类型体操
 
 features:
-  # - title: 内容不多
-  #   details: 这里主要是记录一些本人真实遇到的，或者身边朋友提到的面试题，而不是各路大佬整合的内容，所以内容可能相对较少，但可以确定真的有人考。（后来发现有些自己感觉会考的也想加进来方便自己复习...所以...嘿嘿）
   - title: About J
     details: 😆Hello，我是林嘉裕，英文名Jeffrey，一名前端开发工程师，正在尝试全栈开发
   - title: J-Notes

@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/interviewQuestion/",
-  title: "题目合集",
-  description: "此站点用于收集各路面试题，方便复习和巩固知识点，不会有系统完整的知识点，仅是为了快速回顾",
+  base: "/jeffnex/",
+  title: "JeffNex",
+  description: "JeffNex - 从代码到认知的持续交付",
   srcDir: './src',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

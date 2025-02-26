@@ -50,7 +50,7 @@ jobs:
           pnpm docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
           touch .nojekyll  # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages  # 强制命名（必须与下载时一致）
           path: .vitepress/dist

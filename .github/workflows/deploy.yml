@@ -48,11 +48,20 @@ jobs:
       - name: Build with VitePress
         # run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
         run: pnpm docs:build
+      - name: Build with VitePress
+        run: |
+          pnpm docs:build
+          # 添加 .nojekyll 文件禁用 Jekyll 处理
+          touch .vitepress/dist/.nojekyll
+          # 清理可能存在的符号链接（示例命令）
+          find .vitepress/dist -type l -delete
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: .vitepress/dist
+          # 强制覆盖同名文件
+          overwrite: true
 
 
   # # 部署工作

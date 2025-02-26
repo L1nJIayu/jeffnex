@@ -29,80 +29,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
-      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2 # 安装pnpm并添加到环境变量
         with:
-          node-version: 20
-          # cache: npm # 或 pnpm / yarn
-          cache: pnpm
+          version: 8.6.12 # 指定需要的 pnpm 版本
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm # 或 pnpm / yarn
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v3 # 在工作流程自动配置GithubPages
       - name: Install dependencies
-        # run: npm ci # 或 pnpm install / yarn install / bun install
-        run: pnpm install
-      - name: Build with VitePress
-        # run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
-        run: pnpm docs:build
+        run: pnpm install # 或 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
-          pnpm docs:build
-          # 添加 .nojekyll 文件禁用 Jekyll 处理
-          touch .vitepress/dist/.nojekyll
-          # 清理可能存在的符号链接（示例命令）
-          find .vitepress/dist -type l -delete
+          pnpm docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+          touch .nojekyll  # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
-          name: github-pages
           path: .vitepress/dist
-          # 强制覆盖同名文件
-          overwrite: true
 
-
-  # # 部署工作
-  # deploy:
-  #   needs: build
-  #   permissions:
-  #     pages: write
-  #     id-token: write
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - name: Configure Pages
-  #     uses: actions/configure-pages@v4
-  #   - name: Deploy to GitHub Pages
-  #     id: deployment
-  #     uses: actions/deploy-pages@v3
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   name: Deploy
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v2
-    # Deployment job
+  # 部署工作
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages  # 必须与上传名称一致
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2

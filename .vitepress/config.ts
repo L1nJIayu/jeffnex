@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/JeffNex/",
+  base: "/jeffnex/",
   title: "JeffNex",
   description: "JeffNex - 从代码到认知的持续交付",
   srcDir: './src',

@@ -10,17 +10,24 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: 'CSS', link: '/css' },
-      { text: 'JS', link: '/js' },
-      { text: 'Vue', link: '/vue' },
-      { text: '浏览器和网络', link: '/浏览器和网络' },
-      { text: '数据结构和算法', link: '/数据结构和算法' },
+      {
+        text: '知识库',
+        items: [
+          { text: 'JS', link: '/知识库/js' },
+          { text: 'CSS', link: '/知识库/css' },
+          { text: 'Vue', link: '/知识库/vue' },
+          { text: 'TS类型体操', link: '/知识库/TS类型体操' },
+          { text: '浏览器和网络', link: '/知识库/浏览器和网络' },
+          { text: '数据结构和算法', link: '/知识库/数据结构和算法' },
+        ]
+      },
+      { text: '面经', link: '/面经' },
       { text: '问题记录', link: '/问题记录' },
-      { text: 'TS类型体操', link: '/TS类型体操' },
+      { text: '关于我', link: '/me.md' },
     ],
 
     sidebar: {
-      '/css/': [
+      '/知识库/css/': [
         {
           text: 'CSS',
           items: [
@@ -37,7 +44,7 @@ export default defineConfig({
           ]
         }
       ],
-      '/js/': [
+      '/知识库/js/': [
         {
           text: 'JS',
           items: [
@@ -50,7 +57,7 @@ export default defineConfig({
           ]
         }
       ],
-      '/vue/': [
+      '/知识库/vue/': [
         {
           text: 'Vue',
           items: [
@@ -64,7 +71,7 @@ export default defineConfig({
           ]
         }
       ],
-      '/浏览器和网络/': [
+      '/知识库/浏览器和网络/': [
         { text: '目录', link: '/浏览器和网络'},
         {
           text: '浏览器',
@@ -83,7 +90,7 @@ export default defineConfig({
           ]
         }
       ],
-      '/数据结构和算法/': [
+      '/知识库/数据结构和算法/': [
         { text: '目录', link: '/数据结构和算法'},
         {
           text: '算法',
@@ -112,7 +119,7 @@ export default defineConfig({
           ]
         }
       ],
-      '/TS类型体操': [
+      '/知识库/TS类型体操': [
         { text: '目录', link: '/TS类型体操'},
         {
           text: '1.模式匹配',
@@ -137,6 +144,15 @@ export default defineConfig({
         {
           text: '6.特殊特性',
           link: '/TS类型体操/6.特殊特性.md'
+        }
+      ],
+      '/面经/': [
+        { text: '目录', link: '/面经'},
+        {
+          text: '2024',
+          items: [
+            { text: '比亚迪_一面_2024_10_24', link: '/面经/2024/比亚迪_一面_2024_10_24.md' }
+          ]
         }
       ]
     },

@@ -4,6 +4,7 @@ outline: deep
 
 # CSS
 
+- [box-sizing](./box-sizing.md)
 - [CSS3的transform属性有哪些用法](./CSS3的transform属性有哪些用法.md)
 - [Flex有哪些常用的属性](./Flex有哪些常用的属性.md)
 - [flex为1的时候代表什么意思](./flex为1的时候代表什么意思.md)

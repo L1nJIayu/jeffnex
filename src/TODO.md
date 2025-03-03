@@ -15,12 +15,15 @@
 
   [《什么是monorepo?》](./知识库/其他/什么是monorepo.md)
 
-- [ ] 项目搭建开发搭建
+- [ ] 项目搭建和开发（进行中）
 
+  [项目地址](https://github.com/L1nJIayu/jeff-ui)
 
   基于：`vue3`+`vite`+`ts`+`monorepo`+`pnpm`+`turborepo`
 
   文档：`vitepress`
+
+  
 
 ### 🔖 vite
 

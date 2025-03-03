@@ -1,8 +1,12 @@
+
 # Promise的归纳总结
+
+<br>
 
 <img src="./markdown_assets/Promise.png" alt="Promise思维导图" style="zoom: 50%;" />
 
 ​	Promise也是一种异步编程的解决方案，在ES6引入，它解决了此前使用回调函数编写异步程序所产生的`回调地狱`的问题。
+
 
 ## 一、状态
 

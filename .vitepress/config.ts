@@ -23,6 +23,7 @@ export default defineConfig({
       },
       { text: '面经', link: '/面经' },
       { text: '问题记录', link: '/问题记录' },
+      { text: 'TODO', link: '/TODO.md' },
       { text: '关于我', link: '/me.md' },
     ],
 

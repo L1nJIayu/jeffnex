@@ -9,13 +9,14 @@
 - [ ] React前端
 - [ ] java后端
 
-
-
 ### 🔖 组件库
 
-- [ ] 学习和理解`monorepo`的项目开发模式
+- [x] 学习和理解`monorepo`的项目开发模式
+
+  [《什么是monorepo?》](./知识库/其他/什么是monorepo.md)
 
 - [ ] 项目搭建开发搭建
+
 
   基于：`vue3`+`vite`+`ts`+`monorepo`+`pnpm`+`turborepo`
 
@@ -24,6 +25,8 @@
 ### 🔖 vite
 
 - [ ] 阅读文档，大致了解vite都有什么内容
+
+
 
 
 

@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import markdownItTaskLists from 'markdown-it-task-lists'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
           { text: 'TS类型体操', link: '/知识库/TS类型体操' },
           { text: '浏览器和网络', link: '/知识库/浏览器和网络' },
           { text: '数据结构和算法', link: '/知识库/数据结构和算法' },
+          { text: '其他', link: '/知识库/其他' },
         ]
       },
       { text: '面经', link: '/面经' },
@@ -147,6 +149,10 @@ export default defineConfig({
           link: '/TS类型体操/6.特殊特性.md'
         }
       ],
+      '知识库/其他': [
+        { text: '目录', link: './index.md'},
+        { text: '什么是monorepo', link: './什么是monorepo.md'},
+      ],
       '/面经/': [
         { text: '目录', link: '/面经'},
         {
@@ -161,5 +167,11 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/L1nJiayu' }
     ]
+  },
+  markdown: {
+    config: (md) => {
+      console.log('md', md)
+      md.use(markdownItTaskLists)
+    }
   }
 })

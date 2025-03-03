@@ -8,26 +8,25 @@
 
    - `默认值`
 
-   - 元素的总宽为：`width`
-   - 元素的总高为：`height`
+   - 元素的总宽为：`width` + `padding` + `border`
+   - 元素的总高为：`height` + `padding` + `border`
 
 2. ### border-box
 
-   - 元素的总宽为：`width` + `padding` + `border`
+   - 元素的总宽为：`width`
 
-   - 元素的总高为：`width` + `padding` + `border`
+   - 元素的总高为：`height`
 
 
 
 ## 示例
 
+### box-sizing:content-box
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <style>
     .content-box {
       box-sizing: content-box;
@@ -38,6 +37,29 @@
       padding: 20px;
       border: 10px solid #000;
     }
+  </style>
+</head>
+<body>
+  <div class="content-box">content-box</div>
+</body>
+</html>
+```
+
+![image-20250303182900510](markdown_assets/image-20250303182900510.png)
+
+总宽：width + padding + border = 200px + (20px * 2) + (10px * 2) = 260px
+
+总高：height + padding + border = 200px + (20px * 2) + (10px * 2) = 260px
+
+
+
+### box-sizing:border-box;
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
     .border-box {
       box-sizing: border-box;
       background-color: cadetblue;
@@ -50,16 +72,13 @@
   </style>
 </head>
 <body>
-
-  <div class="content-box">content-box</div>
   <div class="border-box">border-box</div>
-  
 </body>
 </html>
 ```
 
-
-
-![image-20250303182900510](markdown_assets/image-20250303182900510.png)
-
 ![image-20250303182917613](markdown_assets/image-20250303182917613.png)
+
+总宽：width = 200px
+
+总高：height = 200px

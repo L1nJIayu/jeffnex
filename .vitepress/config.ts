@@ -184,7 +184,6 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      console.log('md', md)
       md.use(markdownItTaskLists)
     }
   }

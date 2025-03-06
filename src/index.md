@@ -34,7 +34,7 @@ hero:
 
 features:
   - title: About J
-    details: 😆Hello，我是林嘉裕，英文名Jeffrey，一名前端开发工程师，正在尝试全栈开发
+    details: 😆Hello，我是林嘉裕，英文名Jeffrey，一名程序员。目前主要从事前端开发相关工作~
   - title: J-Notes
     details: 知识点记录
   - title: J-Interviews

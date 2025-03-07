@@ -37,6 +37,8 @@ features:
     details: 😆Hello，我是林嘉裕，英文名Jeffrey，一名程序员。目前主要从事前端开发相关工作~
   - title: J-Notes
     details: 知识点记录
+  - title: J-Project
+    details: 一些项目实战
   - title: J-Interviews
     details: 个人面经
 ---

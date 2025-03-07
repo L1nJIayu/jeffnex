@@ -23,6 +23,12 @@ export default defineConfig({
           { text: '其他', link: '/知识库/其他' },
         ]
       },
+      {
+        text: '项目实战',
+        items: [
+          { text: '组件库搭建', link: '/项目实战/组件库搭建' },
+        ]
+      },
       { text: '面经', link: '/面经' },
       { text: '问题记录', link: '/问题记录' },
       { text: 'TODO', link: '/TODO.md' },
@@ -120,6 +126,17 @@ export default defineConfig({
           items: [
           ]
         }
+      ],
+      '/项目实战/组件库搭建': [
+        { text: '目录', link: '/项目实战/组件库搭建/index.md'},
+        {
+          text: '正文',
+          items: [
+            { text: '1.基本目录结构搭建', link: '/项目实战/组件库搭建/1.基本目录结构搭建.md' },
+            { text: '2.编写第一个组件', link: '/项目实战/组件库搭建/2.编写第一个组件.md' },
+            { text: '3.进一步优化组件', link: '/项目实战/组件库搭建/3.进一步优化组件.md' }
+          ]
+        },
       ],
       '/问题记录': [
         { text: '目录', link: '/问题记录/index.md'},

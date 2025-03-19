@@ -128,7 +128,7 @@ export default defineConfig({
         }
       ],
       '/项目实战/组件库搭建': [
-        { text: '目录', link: '/项目实战/组件库搭建/index.md'},
+        { text: '前言', link: '/项目实战/组件库搭建/index.md'},
         {
           text: '正文',
           items: [

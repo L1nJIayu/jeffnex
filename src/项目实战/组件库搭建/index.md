@@ -2,12 +2,15 @@
 outline: deep
 
 ---
+# 前言
 
-# 基于monorepo搭建组件库
+## 基于monorepo搭建组件库
 
+本项目基于pnpm+Vue3+Vite+TypeScript，以monorepo的形式进行项目架构的基本搭建；
 
+从0开始搭建；
 
-> 本项目基于pnpm+Vue3+Vite+TypeScript，以monorepo的形式进行项目架构的基本搭建。
+主要包含基本目录的构建、打包流程、发布流程以及文档编写等。
 
 
 

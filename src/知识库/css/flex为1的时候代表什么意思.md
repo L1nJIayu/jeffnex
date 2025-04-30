@@ -49,7 +49,7 @@
 </html>
 ```
 
-![image-20241028215332109](markdown_assets/image-20241028215332109.png)
+![image-20241028215332109](./markdown_assets/image-20241028215332109.png)
 
 `flex:auto`代表的是`flex:1 1 auto`，意思是`flex-grow:1`,`flex-shrink:1`,`flex-basis:auto`，所以，在分配剩余空间时，中间的元素会先占据好自己的宽度，此时由于父元素宽度不够了，所以三个项目都会被缩小，均分300px(包含外边距margin)。
 
@@ -92,7 +92,7 @@
 </html>
 ```
 
-![image-20241028215601437](markdown_assets/image-20241028215601437.png)
+![image-20241028215601437](./markdown_assets/image-20241028215601437.png)
 
 `flex:auto`代表的是`flex:1 1 0%`，意思是`flex-grow:1`,`flex-shrink:1`,`flex-basis:0%`，所以，在分配剩余空间时，中间的元素会从0开始扩展，此时由于父元素宽度不够了，所以该项目会被要锁，分配剩余的空间（由于`flex-shrink:1`影响的）。
 

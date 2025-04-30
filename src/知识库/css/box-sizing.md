@@ -45,7 +45,7 @@
 </html>
 ```
 
-![image-20250303182900510](markdown_assets/image-20250303182900510.png)
+![image-20250303182900510](./markdown_assets/image-20250303182900510.png)
 
 总宽：width + padding + border = 200px + (20px * 2) + (10px * 2) = 260px
 
@@ -77,7 +77,7 @@
 </html>
 ```
 
-![image-20250303182917613](markdown_assets/image-20250303182917613.png)
+![image-20250303182917613](./markdown_assets/image-20250303182917613.png)
 
 总宽：width = 200px
 

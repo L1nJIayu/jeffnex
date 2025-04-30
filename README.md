@@ -6,6 +6,6 @@
 
 老AI给我起的..
 
-![image-20250226150012884](markdown_assets/image-20250226150012884.png)
+![image-20250226150012884](./markdown_assets/image-20250226150012884.png)
 
-![image-20250226150205127](markdown_assets/image-20250226150205127.png)
+![image-20250226150205127](./markdown_assets/image-20250226150205127.png)

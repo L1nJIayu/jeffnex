@@ -42,7 +42,7 @@ watch(refObj, () => {
 
 `refObj`和`reactiveObj`给了两个相同的数据结构；当同时监听这俩对象时，改变深层属性`count`，按上面的写法，只有`reactiveObj`触发了改变。
 
-![image-20241031183620512](markdown_assets/image-20241031183620512.png)
+![image-20241031183620512](./markdown_assets/image-20241031183620512.png)
 
 
 

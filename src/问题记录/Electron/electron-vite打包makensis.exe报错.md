@@ -4,7 +4,7 @@
 
 报错内容：
 
-![image-20241123102526390](markdown_assets/image-20241123102526390.png)
+![image-20241123102526390](./markdown_assets/image-20241123102526390.png)
 
 
 
@@ -29,7 +29,7 @@ pnpm run build:win
 
 成功！
 
-![image-20241123103126978](markdown_assets/image-20241123103126978.png)
+![image-20241123103126978](./markdown_assets/image-20241123103126978.png)
 
 
 

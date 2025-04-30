@@ -10,9 +10,9 @@
 
 ## 报错提示内容
 
-![image-20241210102202545](markdown_assets/image-20241210102202545.png)
+![image-20241210102202545](./markdown_assets/image-20241210102202545.png)
 
-![image-20241210102221524](markdown_assets/image-20241210102221524.png)
+![image-20241210102221524](./markdown_assets/image-20241210102221524.png)
 
 
 
@@ -36,7 +36,7 @@
 }
 ```
 
-![image-20241210102517778](markdown_assets/image-20241210102517778.png)
+![image-20241210102517778](./markdown_assets/image-20241210102517778.png)
 
 如果还是解决不了，就确认一下`vite.config.ts`中，`Vue`的组件定义
 

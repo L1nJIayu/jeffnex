@@ -36,7 +36,7 @@ DNS请求过程：
 
 
 
-![image-20241101165905771](markdown_assets/image-20241101165905771.png)
+![image-20241101165905771](./markdown_assets/image-20241101165905771.png)
 
 
 

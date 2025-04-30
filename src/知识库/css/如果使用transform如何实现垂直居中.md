@@ -32,4 +32,4 @@
 </html>
 ```
 
-![image-20241028223901882](markdown_assets/image-20241028223901882.png)
+![image-20241028223901882](./markdown_assets/image-20241028223901882.png)

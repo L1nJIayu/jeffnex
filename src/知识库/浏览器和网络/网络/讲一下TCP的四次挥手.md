@@ -28,4 +28,4 @@
 >
 > 3：ACK=1,seq=x+1,ack=w+1
 
-![image-20241114183554793](markdown_assets/image-20241114183554793.png)
+![image-20241114183554793](./markdown_assets/image-20241114183554793.png)

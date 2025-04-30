@@ -18,7 +18,7 @@
 
 图解：
 
-![image-20241114115950891](markdown_assets/image-20241114115950891.png)
+![image-20241114115950891](./markdown_assets/image-20241114115950891.png)
 
 ## 两次握手会有什么问题？
 

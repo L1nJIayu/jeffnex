@@ -21,4 +21,4 @@
 </html>
 ```
 
-![image-20241104204121640](markdown_assets/image-20241104204121640.png)
+![image-20241104204121640](./markdown_assets/image-20241104204121640.png)

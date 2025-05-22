@@ -134,7 +134,8 @@ export default defineConfig({
           items: [
             { text: '1.基本目录结构搭建', link: '/项目实战/组件库搭建/1.基本目录结构搭建.md' },
             { text: '2.编写第一个组件', link: '/项目实战/组件库搭建/2.编写第一个组件.md' },
-            { text: '3.进一步优化Button组件', link: '/项目实战/组件库搭建/3.进一步优化Button组件.md' }
+            { text: '3.进一步优化Button组件', link: '/项目实战/组件库搭建/3.进一步优化Button组件.md' },
+            { text: '4.组件打包', link: '/项目实战/组件库搭建/4.组件打包.md' }
           ]
         },
       ],

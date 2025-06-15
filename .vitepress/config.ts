@@ -30,8 +30,8 @@ export default defineConfig({
           {
             text: 'Vue原理学习',
             items: [
-              // { text: 'Vue2', link: '/项目实战/Vue原理学习/Vue2/index.md' },
-              // { text: 'Vue3', link: '/项目实战/Vue原理学习/Vue3/index.md' },
+              { text: 'Vue2', link: '/项目实战/Vue原理学习/Vue2/index.md' },
+              { text: 'Vue3', link: '/项目实战/Vue原理学习/Vue3/index.md' },
             ]
           },
         ]
@@ -146,19 +146,19 @@ export default defineConfig({
           ]
         },
       ],
-      // '/项目实战/Vue原理学习/Vue2': [
-      //   { text: '目录', link: '/项目实战/Vue原理学习/Vue2/index.md'},
-      //   {
-      //     text: '正文',
-      //     items: [
-      //       { text: '1.数据劫持', link: '/项目实战/Vue原理学习/Vue2/1.数据劫持.md' },
-      //       { text: '2.依赖追踪', link: '/项目实战/Vue原理学习/Vue2/2.依赖追踪.md' },
-      //       { text: '3.迷你观察者', link: '/项目实战/Vue原理学习/Vue2/3.迷你观察者.md' },
-      //       { text: '4.插件编写', link: '/项目实战/Vue原理学习/Vue2/4.插件编写.md' },
-      //       { text: '5.渲染函数', link: '/项目实战/Vue原理学习/Vue2/5.渲染函数.md' },
-      //     ]
-      //   }
-      // ],
+      '/项目实战/Vue原理学习/Vue2': [
+        { text: '目录', link: '/项目实战/Vue原理学习/Vue2/index.md'},
+        {
+          text: '正文',
+          items: [
+            { text: '1.数据劫持', link: '/项目实战/Vue原理学习/Vue2/1.数据劫持.md' },
+            { text: '2.依赖追踪', link: '/项目实战/Vue原理学习/Vue2/2.依赖追踪.md' },
+            { text: '3.迷你观察者', link: '/项目实战/Vue原理学习/Vue2/3.迷你观察者.md' },
+            { text: '4.插件编写', link: '/项目实战/Vue原理学习/Vue2/4.插件编写.md' },
+            { text: '5.渲染函数', link: '/项目实战/Vue原理学习/Vue2/5.渲染函数.md' },
+          ]
+        }
+      ],
       '/问题记录': [
         { text: '目录', link: '/问题记录/index.md'},
         {

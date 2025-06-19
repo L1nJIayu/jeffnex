@@ -159,6 +159,16 @@ export default defineConfig({
           ]
         }
       ],
+      '/项目实战/Vue原理学习/Vue3': [
+        { text: '目录', link: '/项目实战/Vue原理学习/Vue3/index.md'},
+        {
+          text: '正文',
+          items: [
+            { text: '1.渲染函数', link: '/项目实战/Vue原理学习/Vue3/1.渲染函数.md' },
+          ]
+        }
+
+      ],
       '/问题记录': [
         { text: '目录', link: '/问题记录/index.md'},
         {

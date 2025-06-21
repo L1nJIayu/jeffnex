@@ -165,6 +165,9 @@ export default defineConfig({
           text: '正文',
           items: [
             { text: '1.渲染函数', link: '/项目实战/Vue原理学习/Vue3/1.渲染函数.md' },
+            { text: '2.实现h函数', link: '/项目实战/Vue原理学习/Vue3/2.实现h函数.md' },
+            { text: '3.实现patch函数', link: '/项目实战/Vue原理学习/Vue3/3.实现patch函数.md' },
+            { text: '4.依赖追踪', link: '/项目实战/Vue原理学习/Vue3/4.依赖追踪.md' },
           ]
         }
 

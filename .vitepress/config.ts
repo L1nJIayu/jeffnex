@@ -157,6 +157,7 @@ export default defineConfig({
             { text: '4.渲染函数', link: '/项目实战/Vue原理学习/Vue2/4.渲染函数.md' },
             { text: '5.插件编写', link: '/项目实战/Vue原理学习/Vue2/5.插件编写.md' },
             { text: '5.响应性实现', link: '/项目实战/Vue原理学习/Vue2/5.响应性实现.md' },
+            { text: '6.实现迷你Vue', link: '/项目实战/Vue原理学习/Vue2/6.实现迷你Vue.md' },
           ]
         }
       ],

@@ -55,6 +55,7 @@ export default defineConfig({
             { text: '如果使用transform如何实现垂直居中？', link: '/知识库/css/如果使用transform如何实现垂直居中.md' },
             { text: '伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？', link: '/知识库/css/伪元素和伪类是否熟悉？他们有什么区别？用法都是什么？.md' },
             { text: '只用CSS画一个三角形', link: '/知识库/css/只用CSS画一个三角形.md' },
+            { text: 'BFC', link: '/知识库/css/BFC.md' },
             // { text: '层叠上下文', link: '/知识库/css/层叠上下文.md' },
             // { text: '垂直居中的方案', link: '/知识库/css/垂直居中的方案.md' },
             // { text: 'FLex布局', link: '/知识库/css/FLex布局.md' },

@@ -121,12 +121,12 @@ jobs:
         run: pnpm docs:build
       
       - name: Add .nojekyll file
-        run: touch docs/.vitepress/dist/.nojekyll  # 正确的路径
+        run: touch .vitepress/dist/.nojekyll  # 正确的路径
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist  # 修正路径
+          path: .vitepress/dist  # 修正路径
 
   # 部署工作
   deploy:

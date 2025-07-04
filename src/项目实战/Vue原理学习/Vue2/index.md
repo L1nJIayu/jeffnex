@@ -4,15 +4,12 @@
 本篇笔记学习，参考自尤雨溪课程[`Vue Workshop:Advanced Features from the Ground Up`](https://www.bilibili.com/video/BV1d4411v7UX?spm_id_from=333.788.videopod.episodes&vd_source=6eb095cb0562513bfc69ebc6ae07e057&p=2)
 
 ## 笔记目录
-> TODO：写完笔记再来完善
-> - Intro
-> - Fundamentals:Reactivity
-> - Fundamentals:Writing Plugins
-> - Fundamentals:Render Functions
-> - State Management
-> - Routing
-> - Form Validation
-> - i18n
+1. [1.数据劫持](./1.数据劫持.md)
+2. [2.依赖追踪](./2.依赖追踪.md)
+3. [3.迷你观察者](./3.迷你观察者.md)
+4. [4.渲染函数](./4.渲染函数.md)
+5. [5.插件编写](./5.插件编写.md)
+
 
 
 ## 背景思考

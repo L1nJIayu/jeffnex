@@ -119,7 +119,7 @@ BFC是一个隔离区域，这个区域中的子元素不会影响到外部的�
 
 针对父子元素：
 
-<img src="markdown_assets/image-20240808000912962.png" alt="image-20240808000912962" style="zoom:50%;" />
+<img src="./markdown_assets/image-20240808000912962.png" alt="image-20240808000912962" style="zoom:50%;" />
 
 这个问题可以利用BFC来解决
 
@@ -142,7 +142,7 @@ BFC是一个隔离区域，这个区域中的子元素不会影响到外部的�
 </style>
 ```
 
-<img src="markdown_assets/image-20240808001330770.png" alt="image-20240808001330770" style="zoom:50%;" />
+<img src="./markdown_assets/image-20240808001330770.png" alt="image-20240808001330770" style="zoom:50%;" />
 
 这回就是各管各的外边距了，加起来就有150px了。
 

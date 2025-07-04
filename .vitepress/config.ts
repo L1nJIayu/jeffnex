@@ -171,6 +171,8 @@ export default defineConfig({
             { text: '2.实现h函数', link: '/项目实战/Vue原理学习/Vue3/2.实现h函数.md' },
             { text: '3.实现patch函数', link: '/项目实战/Vue原理学习/Vue3/3.实现patch函数.md' },
             { text: '4.依赖追踪', link: '/项目实战/Vue原理学习/Vue3/4.依赖追踪.md' },
+            { text: '5.响应性实现', link: '/项目实战/Vue原理学习/Vue3/5.响应性实现.md' },
+            { text: '6.实现迷你Vue', link: '/项目实战/Vue原理学习/Vue3/6.实现迷你Vue.md' },
           ]
         }
 

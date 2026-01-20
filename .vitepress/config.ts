@@ -221,7 +221,8 @@ export default defineConfig({
       ],
       '知识库/其他': [
         { text: '目录', link: '/知识库/其他/index.md'},
-        { text: '什么是monorepo', link: '知识库/其他/什么是monorepo.md'},
+        { text: '什么是monorepo', link: '/知识库/其他/什么是monorepo.md'},
+        { text: 'Docker', link: '/知识库/其他/docker.md'},
       ],
       '/面经/': [
         { text: '目录', link: '/面经/index.md'},

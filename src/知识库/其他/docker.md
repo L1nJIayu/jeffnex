@@ -24,7 +24,7 @@ Docker简单来说就是用容器化技术，给应用程序封装一个独立�
 
 `	hub.docker.com`是Docker的官方仓库，里面有很多开源的镜像。
 
-## 
+
 
 ## 三、镜像源配置
 
@@ -294,8 +294,6 @@ docker stop [容器的ID或者名称]
 docker start [容器的ID或者名称]
 ```
 
-
-
 #### 5.3.查看容器启动时使用的参数
 
 ```sh
@@ -304,15 +302,11 @@ docker inspect [容器的ID或者名称]
 
 输入的内容可能会很多，建议直接贴给AI总结确认。
 
-
-
 #### 5.4.只创建容器，不运行
 
 ```sh
 docker create -p 11180:80 nginx
 ```
-
-
 
 #### 5.5.查看容器运行日志
 
@@ -322,6 +316,65 @@ docker logs [容器的ID或者名称] -f
 
 - `-f`,`--follow`：追踪输出，相当于实时查看当前的运行日志。
 
+#### 5.6.在容器内部执行指定的命令
+
+```sh
+docker exec [容器ID] [Linux命令]
+```
 
 
-#### 5.6.执行指定的命令
+
+#### 5.7.进入一个正在运行的Docker容器内部
+
+```sh
+docker exec -it [容器ID] /bin/sh
+```
+
+可以获得一个交互式的命令行环境
+
+【实践】
+
+创建一个nginx容器，进入容器内部修改nginx提供的初始界面。
+
+```sh
+docker run -d -p 11180:80 nginx
+```
+
+然后在浏览器访问`localhost:11180`，可以看到一个nginx提供的初始界面。
+
+（如果开了VPN可能会访问不到，可以访问`127.0.0.1:11180`试试）
+
+接着进入容器内部，查看容器的id，然后进入容器内部
+
+```sh
+docker ps # 查看id，拷贝下来
+
+# 进入容器
+docker exec -it 85a49166abd2 /bin/sh
+
+# 进入nginx的html目录
+cd /usr/share/nginx/html
+ls # 查看是否有index.html
+
+# 尝试用vi修过index.html
+vi index.html
+
+# 如果没有vi，需要查看系统版本，进行相应工具的安装
+# Debian可以使用apt
+apt update # 获取最新索引
+apt install vim # 安装vim工具
+vi index.html # 进入文件开始修改内容，保存后刷新浏览器查看是否修改成功。
+```
+
+
+
+
+
+## 五、Dockerfile
+
+命令行很麻烦，可以用 
+
+
+
+
+

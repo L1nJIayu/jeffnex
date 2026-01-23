@@ -44,6 +44,10 @@ watch(refObj, () => {
 
 ![image-20241031183620512](./markdown_assets/image-20241031183620512.png)
 
+这是因为对于`refObj`来说，只会监听`refObj.value`的引用变化，对于内部深沉嵌套是不会监听到的。
+
+
+
 
 
 如果想要`refObj`被监听，有两种方法可以实现：

@@ -559,9 +559,11 @@ docker network create network111
 创建mongodb容器并指定子网`network111`
 
 ```sh
-docker run -d --name my_mongodb \
+docker run -d \
+--name my_mongodb \
 -e MONGO_INITDB_ROOT_USERNAME=root \
 -e MONGO_INITDB_ROOT_PASSWORD=123456 \
+-v /my/datadir:/data/db
 --network network111 \
 mongo
 ```
@@ -653,7 +655,102 @@ docker network rm
 
 
 
-## 七、Docker Compose
+## 七、Docker-Compose
+
+`Docker Compose`是用于容器编排的。
+
+一个完整的应用是由很多部分组成的，比如前端、后端和数据库。如果把他们全部放置在一个容器里面，扩展性会变差，若其中一个模块出问题，整个应用就都不能用了。
+
+所以实际场景下，一般都是一个模块一个容器，但这么多容器，如果一个个`docker run`就显得很麻烦了，所以需要用上我们的`Docker Compose`。
+
+上一节创建`mongodb`相关容器时，我们需要完成以下工作：
+
+```sh
+# 创建自定义子网
+docker network create network111
+
+# 运行mongodb容器
+docker run -d \
+--name my_mongodb \
+-e MONGO_INITDB_ROOT_USERNAME=root \
+-e MONGO_INITDB_ROOT_PASSWORD=123456 \
+-v /my/datadir:/data/db
+--network network111 \
+mongo
+
+# 运行mongo-express容器
+docker run -d \
+--name my_mongodb_express \
+-p 8081:8081 \
+-e ME_CONFIG_MONGODB_SERVER=my_mongodb \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=root \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=123456 \
+--network network111 \
+mongo-express
+```
+
+我们把它改成`docker-compose.yaml`
+
+```yaml
+services:
+	my_mongodb:
+		images: mongo
+		environment:
+			MONGO_INITDB_ROOT_USERNAME: root
+			MONGO_INITDB_ROOT_PASSWORD: 123456
+		volumes:
+			- /my/datadir:/data/db
+	
+	my_mongo_express:
+		images: mongo-express
+		ports:
+			- 8081:8081
+		environment:
+			ME_CONFIG_MONGODB_SERVER: my_mongodb
+			ME_CONFIG_MONGODB_ADMINUSERNAME: root
+			ME_CONFIG_MONGODB_ADMINPASSWORD: 123456
+```
+
+`docker`会为每一个`compose`文件自动创建一个子网，所以文件里面不需要写`network111`；里面定义的所有容器，都会被划分到同一个子网。
+
+除此以外，还能自定义容器的启动顺序：
+
+```yaml
+services:
+	my_mongo_express:
+		depends_on:
+			- my_mongodb	# 表示该容器依赖my_mongodb，容器就会先启动my_mongodb
+```
 
 
+
+启动：
+
+```sh
+docker compose up -d # 在后台启动容器
+```
+
+停止并删除容器：
+
+```sh
+docker compose down
+```
+
+仅停止，不删除
+
+```sh
+docker compose stop
+```
+
+把刚才停止的容器启动
+
+```sh
+docker compose start
+```
+
+指定compose的文件名：
+
+```sh
+docker compose -f ./my-docker-compose.yaml up -d
+```
 

@@ -425,6 +425,8 @@ http://localhost:8000
 
 ![image-20260129154535847](./markdown_assets/image-20260129154535847.png)
 
+### 镜像打包
+
 接下来把该程序打包成Docker镜像
 
 创建一个`Dockerfile`文件，注意文件没有后缀，大小写要一致
@@ -437,7 +439,8 @@ FROM python:3.13-slim
 WORKDIR /app
 
 # 把代码文件拷贝到镜像工作目录中
-COPY . . # 第一个点代表本机的当前目录，第二个点代表镜像内当前的工作目录（也就是工作目录）
+# 第一个点代表本机的当前目录，第二个点代表镜像内当前的工作目录（也就是工作目录）
+COPY . .
 
 # 执行安装依赖的命令
 RUN pip install -r ./requirements.txt
@@ -447,7 +450,7 @@ EXPOSE 8000
 
 # CMD是容器运行时的默认启动命令，当容器启动的时候，容器内部会自动执行这个命令
 # 一个Dockerfile里面只能写一个，最好以数组形式编写，不要有空格
-CMD ["pyhton", "app.py"]
+CMD ["python", "app.py"]
 
 # 类似的还有ENTRYPOINT，它的优先级更高一些
 
@@ -457,14 +460,200 @@ CMD ["pyhton", "app.py"]
 执行镜像制作命令
 
 ```sh
-docker build -t docker_test
+docker build -t docker_test .
 ```
 
 `-t`指定镜像名称
 
+`.`指的是在当前文件夹下构建
 
 
 
+接着基于这个镜像创建一个容器，测试该镜像是否有问题
+
+```sh
+docker run -d -p 8000:8000 docker_test
+```
+
+启动成功以后，在浏览器访问`localhost:8000`，如果能得到JSON内容，说明成功了。
+
+### 镜像发布
+
+接下来尝试把镜像发布到`Docker Hub`，发布之前要先去[官网](https://hub.docker.com/)注册账号。
+
+注册好之后，先在`Docker Desktop`软件上登录，然后在命令行输入：
+
+```sh
+docker login
+```
+
+再次输入用户名和密码，登录成功后，命令行会显示`Login Succeeded`
+
+![image-20260131230255727](./markdown_assets/image-20260131230255727.png)
+
+
+
+接下来，重新打包镜像，这次打包要在镜像名的前面加上自己的用户名
+
+```sh
+docker build -t jeffreylam2022/docker_test .
+```
+
+打包成功后，推送
+
+```sh
+docker push jeffreylam2022/docker_test:latest
+```
+
+![image-20260201000318897](./markdown_assets/image-20260201000318897.png)
+
+去[`Docker Hub`](https://hub.docker.com/explore)上搜索自己的镜像`jeffreylam2022/docker_test`
+
+![image-20260201000420315](./markdown_assets/image-20260201000420315.png)
+
+
+
+如果推送遇到报错
+
+```sh
+unauthorized: access token has insufficient scopes
+```
+
+有两种可能：
+
+- 未登录成功
+- 在`Docker Hub`上面还没有docker_test这个仓库，需要手动创建
+
+尝试重新登录
+
+```sh
+docker logout
+
+docker login -u jeffreylam2022
+
+docker push jeffreylam2022/docker_test:latest
+```
+
+
+
+## 六、Docker网络
+
+### 6.1.桥接模式
+
+Docker的网络默认是Bridge（桥接模式）,使所有的容器默认连接到该网络，每个容器都会被分配一个内部的ip地址，在该内部网络中，容器之间可以通过ip地址相互访问，但容器与宿主机的网络是相互隔离的。
+
+
+
+创建子网：
+
+```sh
+docker network create network111
+```
+
+同一个子网的容器可以相互通信，不同子网的则不行。
+
+同一子网的容器可以使用容器名字相互访问，不需要使用IP地址，不同子网则不行。
+
+
+
+创建mongodb容器并指定子网`network111`
+
+```sh
+docker run -d --name my_mongodb \
+-e MONGO_INITDB_ROOT_USERNAME=root \
+-e MONGO_INITDB_ROOT_PASSWORD=123456 \
+--network network111 \
+mongo
+```
+
+创建`mongo-express`容器，同样指定子网`network111`，
+
+```sh
+docker run -d \
+--name my_mongodb_express \
+-p 8081:8081 \
+-e ME_CONFIG_MONGODB_SERVER=my_mongodb \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=root \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=123456 \
+--network network111 \
+mongo-express
+```
+
+使用浏览器访问`localhost:8081`
+
+默认的用户名密码：`admin/pass`
+
+![image-20260201223948977](./markdown_assets/image-20260201223948977.png)
+
+进入`mongo-express`容器，尝试ping
+
+```sh
+docker exec -it my_mongodb_express /bin/sh
+
+ping my_mongodb
+```
+
+不需要使用ip地址，docker内部有DNS机制。
+
+![image-20260201224246969](./markdown_assets/image-20260201224246969.png)
+
+### 6.2.host模式
+
+Docker容器直接共享宿主机器的网络，容器直接使用宿主的ip地址，不需要使用`-p`参数进行端口映射。
+
+使用host模式启动nginx：
+
+```sh
+docker run -d --network host nginx
+```
+
+浏览器访问服务器的地址加上端口80，就能访问到nginx了。
+
+> 注意，仅在Linux能实现。
+>
+> ![image-20260201225250576](./markdown_assets/image-20260201225250576.png)
+
+进入容器内部看看ip地址：
+
+```sh
+docker ps # 找到容器的id
+
+docker exec -it [容器ID] /bin/sh
+
+# 安装工具
+apt update
+apt install iproute2
+# 查看ip
+ip addr show
+```
+
+可以看到容器的ip与服务器的ip是一样的。
+
+### 6.3.None模式
+
+无网络模式
+
+### 6.4.其他
+
+查看Docker所有网络：
+
+```sh
+docker network list
+```
+
+![image-20260201225453408](./markdown_assets/image-20260201225453408.png)
+
+移除网络：
+
+```sh
+docker network rm
+```
+
+默认网络（`bridge`、`host`、`none`）是不能删除的，只能删除自定义的子网
+
+
+
+## 七、Docker Compose
 
 
 
